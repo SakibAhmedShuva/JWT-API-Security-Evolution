@@ -1,0 +1,5 @@
+Flask==3.0.3
+Flask_JWT_Extended==4.6.0
+PyJWT==2.9.0
+python-dotenv==1.0.1
+Werkzeug==3.1.1
