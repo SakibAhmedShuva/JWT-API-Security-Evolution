@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "e6f4313b-e8de-45fd-bf71-e1035ef9f94f",
+		"name": "Calculator-JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34252114"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"chaka\",\r\n  \"password\": \"214123123!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:5102/login",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5102",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDU2NzU4NSwianRpIjoiNmFmMjBhMWItNDE4Yy00OWI4LWFlMzItMWExNTJlNGQ1ZTNlIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiJjaGFrYSIsIm5iZiI6MTczMDU2NzU4NSwiY3NyZiI6ImNjYjExNjViLWJjNjMtNDM0Ny04YWU2LTUwNTIyNzUxMDhkMSIsImV4cCI6MTczMzE1OTU4NX0.WdFfl4F_6FX52Ug7xQNohn-2_XWMyJckFucuvzXsh_k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:5102/refresh",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5102",
+					"path": [
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDU2NzU4NSwianRpIjoiNDE2YWE2NjYtNjQ3Mi00NzIzLTkyNDUtNzg3NTdkMmY4ODYwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNoYWthIiwibmJmIjoxNzMwNTY3NTg1LCJjc3JmIjoiMTU5ZWVkMjMtNjAyMi00NjAzLTg1OTItNDJmMWNkYjY5ZTZjIiwiZXhwIjoxNzMwNTcxMTg1fQ.wlq9oRJanUv1U0LwNdjrtRLkVoLEkoG00FKAFg7j2OA",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMDU2ODM0MiwianRpIjoiOThjYjY3MTItNTAwOC00NWMyLTkyNTAtZTg2ZWRjN2I3ZWFlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNoYWthIiwibmJmIjoxNzMwNTY4MzQyLCJjc3JmIjoiZGJiMDhkODYtOWJiNy00ODZhLWI3MjYtZjk4ZjA4Zjk1NWY4IiwiZXhwIjoxNzMwNTcxOTQyfQ.UVyQ9hkjwgMZLg9mmHJZgbrNMDYtGOwo4VW-7xhr3qY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"operation\": \"add\",  // or \"subtract\", \"multiply\", \"divide\"\r\n  \"num1\": 10,\r\n  \"num2\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:5102/calculate",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5102",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
